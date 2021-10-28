@@ -24,8 +24,8 @@ const Comments = () => {
             <div className="comment">
               <p>{comment}</p>
               <div className="cbtns">
-              <button className="c-reply" onClick={() => handleReply(commentId)}>Reply</button>
-              <button className="c-delete" onClick={() => handleDelete(commentId)}>Delete</button>
+              <button className="c-reply" onClick={() => handleReply(commentId)}><i class="far fa-paper-plane"></i></button>
+              <button className="c-delete" onClick={() => handleDelete(commentId)}><i class="far fa-trash-alt"></i></button>
               </div>
             </div>
             <ReplyComments repliesLikes={repliesLikes} commentId={commentId} />

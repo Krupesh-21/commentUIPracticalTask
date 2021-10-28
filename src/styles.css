@@ -1,152 +1,225 @@
-*,*::before,*::after{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.container{
-    width:50%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    margin-top: 20px;
+.container {
+  width: 50%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 20px;
 }
 
-.add-comment-container{
-    display: flex;
-    justify-content: flex-end;
+.add-comment-container {
+  display: flex;
+  justify-content: flex-end;
 }
 
-.add-comment-container button, .modal-container .modal-footer button{
-    border: none;
-    padding: 0.5em;
-    outline: none;
-    background-color: coral;
-    color: #333;
-    font-size: 1.1rem;
-    font-weight: 600;
-    border-radius: 5px;
+.add-comment-container button {
+  border: none;
+  padding: 0.7em;
+  outline: none;
+  background-color: #ffd166;
+  color: #073b4c;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 3px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-.modal-container{
-    position: absolute;
-    background-color: ghostwhite;
-    padding: 1em;
-    width: 30%;
-    border: 1px solid #333;
-    border-radius: 5px;
-    display: grid;
-    grid-template-columns: 1fr;
-    z-index: 10;
-    top:10%;
-    left: 35%;
+.modal-container {
+  position: absolute;
+  background-color: #ffffff;
+  padding: 1em;
+  width: 30%;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr;
+  z-index: 10;
+  top: 20%;
+  left: 35%;
+  animation: modal 0.6s ease;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 10px;
+  height: 20%;
 }
 
-.modal-container input{
-    padding: 1em;
-    outline: none;
+@keyframes modal {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
-.modal-container .modal-footer{
-    display: flex;
-    justify-content: flex-end;
-   
+.modal-container input {
+  padding: 0.6em;
+  font-size: 1.1rem;
+  outline: none;
+  font-family: "Source Code Pro", monospace;
+  border: 1px solid #dee2e6;
+  box-shadow: 4px 4px 0px rgb(0 0 0 / 20%);
+  border-radius: 6px;
+  background: transparent;
+  height: 50px;
+}
+
+.modal-container .modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
 }
 
 .modal-container .modal-footer button {
-    margin-left: 10px;
-    margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 0;
+  height: 50px;
 }
 
-.comment-btn{
-    background-color: green !important;
-    color: aliceblue !important;
+.comment-btn {
+  background-color: #ffffff;
+  color: #433e3f;
+  font-weight: 600;
+  border: 2px solid #9fa0ff;
+  border-radius: 5px;
+  padding: 0.7em;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+.comment-btn:hover {
+  border: 2px solid #ffffff;
+  background-color: #4361ee;
+  color: #fdffff;
 }
 
-.cancel-btn{
-    background-color: rgb(223, 55, 55) !important;
-    color: aliceblue !important;
+.cancel-btn {
+  background-color: #ffffff;
+  color: #433e3f;
+  font-weight: 600;
+  border: 2px solid #f56960;
+  border-radius: 5px;
+  padding: 0.7em;
+  font-size: 1.1rem;
+  cursor: pointer;
 }
 
-.comment-container{
-    background-color: #f8f9fa;
-    border: 1px solid #333;
-    margin-block: 10px;
-    border-radius: 5px;
-    padding: 1em;
-    display: grid;
-    grid-template-columns: 1fr;
+.cancel-btn:hover {
+  background-color: #f93943;
+  border: 2px solid #ffffff;
+  color: #fdffff;
 }
 
-.comment{
-    background-color: #8ecae6;
-    padding: 0.3em;
-    color: #023047;
-    font-size: 1.1rem;
-    font-weight: 500;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.comment-container {
+  background-color: #ffffff;
+  border: 2px solid #ff99c8;
+  margin-block: 10px;
+  border-radius: 5px;
+  padding: 1em;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.comment {
+  background-color: #8ecae6;
+  padding: 0.3em 1em;
+  color: #023047;
+  font-size: 1.1rem;
+  font-weight: 500;
+  display: grid;
+  grid-template-columns: 1fr 0.2fr;
+  border-radius: 15px;
 }
 .comment p {
+  display: flex;
+  align-items: center;
+}
+.cbtns {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+}
+.cbtns button {
+  margin-left: 10px;
+  border: none;
+  padding: 0.5em;
+  outline: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  /* width: 70%; */
+  background: transparent;
+  cursor: pointer;
+}
+
+.c-reply i{
+  color: #0260f6;
+}
+
+.c-delete i{
+  color: #f25c54;
+}
+
+.reply-container {
+  width: 80%;
+  place-self: end end;
+}
+
+.reply-comment {
+  background-color: #fac05e;
+  display: grid;
+  grid-template-columns: 1fr 0.2fr;
+  padding: 0.4em;
+  margin-block: 10px;
+  border-radius: 15px;
+}
+
+.reply-comment p {
     display: flex;
     align-items: center;
 }
-.cbtns{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
-.cbtns button{
-    margin-left: 10px;
-    border: none;
-    padding: 0.5em;
-    outline: none;
-    font-size: 1rem;
-    width: 20%;
-    border-radius: 5px;
+
+.r-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
 }
 
-.c-reply{
-    background-color: #3a86ff;
+.r-btns button {
+  margin-left: 5px;
+  border: none;
+  padding: 0.5em;
+  outline: none;
+  font-size: 1rem;
+  width: 70%;
+  border-radius: 5px;
+  background: transparent;
+  cursor: pointer;
+}
+.r-btns button:first-of-type{
+    margin-left: 0;
 }
 
-.c-delete{
-    background-color: #ff6b6b;
+.r-like {
+  background-color: #0496ff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
-.reply-container{
-    width: 80%;
-    place-self: end end;
+.r-like i{
+    color: #0260f6;
+    margin-left: 5px;
+    font-size: 1.2rem;
 }
 
-.reply-comment{
-    background-color: #fac05e;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0.4em;
-    margin-block: 10px;
-}
-
-.r-btns{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
-
-.r-btns button{
-    margin-left: 10px;
-    border: none;
-    padding: 0.5em;
-    outline: none;
-    font-size: 0.8rem;
-    width: 20%;
-    border-radius: 5px;
-}
-
-.r-like{
-    background-color: #0496ff;
-}
-
-.r-delete{
-    background-color: #ff6b6b;
+.r-delete i{
+  color: #ff6b6b;
 }

@@ -20,11 +20,18 @@ const ReplyComments = ({ repliesLikes = [], commentId }) => {
             <div className="reply-comment">
               <p>{reply}</p>
               <div className="r-btns">
-                <button className="r-like" onClick={() => handleLikes(commentId, replyId)}>
-                  Likes <span>{`(${likes})`}</span>
+                <button
+                  className="r-like"
+                  onClick={() => handleLikes(commentId, replyId)}
+                >
+                  <span>{likes}</span>
+                  <i class="fas fa-thumbs-up"></i>
                 </button>
-                <button className="r-delete" onClick={() => handleDelete(commentId, replyId)}>
-                  Delete
+                <button
+                  className="r-delete"
+                  onClick={() => handleDelete(commentId, replyId)}
+                >
+                  <i class="far fa-trash-alt"></i>
                 </button>
               </div>
             </div>
