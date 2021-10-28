@@ -28,7 +28,7 @@ const Comments = () => {
               <button className="c-delete" onClick={() => handleDelete(commentId)}><i class="far fa-trash-alt"></i></button>
               </div>
             </div>
-            <ReplyComments repliesLikes={repliesLikes} commentId={commentId} />
+            {repliesLikes.length !== 0 && <ReplyComments repliesLikes={repliesLikes} commentId={commentId} />}
           </div>
         ))}
     </div>

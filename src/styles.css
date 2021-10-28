@@ -85,7 +85,7 @@
 
 .comment-btn {
   background-color: #ffffff;
-  color: #433e3f;
+  color: #393d3f;
   font-weight: 600;
   border: 2px solid #9fa0ff;
   border-radius: 5px;
@@ -118,7 +118,7 @@
 
 .comment-container {
   background-color: #ffffff;
-  border: 2px solid #ff99c8;
+  border: 2px solid #168aad;
   margin-block: 10px;
   border-radius: 5px;
   padding: 1em;
@@ -129,7 +129,7 @@
 .comment {
   background-color: #99e2b4;
   padding: 0.3em 1em;
-  color: #023047;
+  color: #393d3f;
   font-size: 1.1rem;
   font-weight: 500;
   display: grid;
@@ -140,6 +140,7 @@
 .comment p {
   display: flex;
   align-items: center;
+  font-family: "Source Code Pro", monospace;
 }
 .cbtns {
   display: flex;
@@ -158,15 +159,15 @@
   background: transparent;
   cursor: pointer;
 }
-i{
-    font-weight: 600;
+i {
+  font-weight: 600;
 }
 
-.c-reply i{
+.c-reply i {
   color: #0260f6;
 }
 
-.c-delete i{
+.c-delete i {
   color: #f25c54;
 }
 
@@ -186,8 +187,9 @@ i{
 }
 
 .reply-comment p {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  font-family: "Source Code Pro", monospace;
 }
 
 .r-btns {
@@ -208,8 +210,8 @@ i{
   background: transparent;
   cursor: pointer;
 }
-.r-btns button:first-of-type{
-    margin-left: 0;
+.r-btns button:first-of-type {
+  margin-left: 0;
 }
 
 .r-like {
@@ -220,24 +222,24 @@ i{
   align-items: center;
 }
 
-.r-like i{
-    color: #0260f6;
-    margin-left: 5px;
-    font-size: 1.2rem;
+.r-like i {
+  color: #0260f6;
+  margin-left: 5px;
+  font-size: 1.2rem;
 }
 
-.r-delete i{
+.r-delete i {
   color: #ff6b6b;
 }
 
-.app-header{
-    background-color: #023047;
-    padding: 0.6em;
-    color: #ffb703;
-    font-size: 1.4rem;
-    font-weight: 700;
-    font-family: 'Source Code Pro', monospace;
-    text-align: center;
-    border-radius: 10px;
-    margin-bottom: 10px;
+.app-header {
+  background-color: #023047;
+  padding: 0.6em;
+  color: #ffb703;
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-family: "Source Code Pro", monospace;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
