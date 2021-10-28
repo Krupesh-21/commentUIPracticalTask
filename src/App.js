@@ -4,6 +4,7 @@ import Comments from "./components/Comments";
 import Modal from "./components/reusable/Modal";
 import { CommentContext } from "./commentContext";
 import "./styles.css";
+import Header from "./components/Header";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -34,8 +35,6 @@ const reducer = (state, action) => {
       }
       return sCopy;
     case "ADD_LIKE":
-      console.log("like", action.payload);
-      let lCount = 0;
       const foundCom = state.find(
         (comment) => action.payload.commentId === comment.commentId
       );
@@ -44,11 +43,7 @@ const reducer = (state, action) => {
       );
       const upRepLikes = foundCom.repliesLikes.map((item) => {
         if (item.replyId === action.payload.replyId) {
-          if (item.likes === undefined || item.likes === null) {
-            return { ...item, likes: lCount + 1 };
-          } else {
-            return { ...item, likes: item.likes + 1 };
-          }
+          return { ...item, likes: item.likes + 1 };
         } else {
           return item;
         }
@@ -58,7 +53,7 @@ const reducer = (state, action) => {
       return copy;
 
     case "DELETE_REPLY":
-        console.log("delete",action.payload);
+      console.log("delete", action.payload);
       const foundComment = state.find(
         (comment) => action.payload.commentId === comment.commentId
       );
@@ -78,7 +73,6 @@ const reducer = (state, action) => {
       return shCopy;
 
     case "DELETE_COMMENT":
-        
       const updatedCommentData = state.filter(
         (comment) => comment.commentId !== action.payload
       );
@@ -109,6 +103,7 @@ const App = () => {
       }}
     >
       <div className="container">
+        <Header />
         <AddComment />
         <Comments />
         {isOpen ? (

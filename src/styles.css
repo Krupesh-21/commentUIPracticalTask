@@ -80,6 +80,7 @@
   margin-left: 10px;
   margin-bottom: 0;
   height: 50px;
+  outline: none;
 }
 
 .comment-btn {
@@ -126,7 +127,7 @@
 }
 
 .comment {
-  background-color: #8ecae6;
+  background-color: #99e2b4;
   padding: 0.3em 1em;
   color: #023047;
   font-size: 1.1rem;
@@ -134,6 +135,7 @@
   display: grid;
   grid-template-columns: 1fr 0.2fr;
   border-radius: 15px;
+  box-shadow: 4px 4px 2px #358f80d5;
 }
 .comment p {
   display: flex;
@@ -156,6 +158,9 @@
   background: transparent;
   cursor: pointer;
 }
+i{
+    font-weight: 600;
+}
 
 .c-reply i{
   color: #0260f6;
@@ -171,12 +176,13 @@
 }
 
 .reply-comment {
-  background-color: #fac05e;
+  background-color: #b6ccfe;
   display: grid;
   grid-template-columns: 1fr 0.2fr;
-  padding: 0.4em;
+  padding: 0.3em 1em;
   margin-block: 10px;
   border-radius: 15px;
+  box-shadow: 4px 4px 2px #7678edc0;
 }
 
 .reply-comment p {
@@ -222,4 +228,16 @@
 
 .r-delete i{
   color: #ff6b6b;
+}
+
+.app-header{
+    background-color: #023047;
+    padding: 0.6em;
+    color: #ffb703;
+    font-size: 1.4rem;
+    font-weight: 700;
+    font-family: 'Source Code Pro', monospace;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
