@@ -36,3 +36,15 @@ const Comments = () => {
 };
 
 export default Comments;
+
+// function rec(num){
+//   let m = num*num;
+//   if(m > 100){
+//   return m
+//   } else {
+//     m = rec(num*num);
+//     return m;
+//   }
+// }
+
+// rec(2);

@@ -19,7 +19,7 @@ const reducer = (state, action) => {
         (comment) => action.payload.commentId === comment.commentId
       );
       const sCopy = [...state];
-      if (found) {
+      if (index !== -1) {
         sCopy[index] = {
           ...found,
           repliesLikes: [
@@ -49,7 +49,10 @@ const reducer = (state, action) => {
         }
       });
       const copy = [...state];
-      copy[indexCom] = { ...foundCom, repliesLikes: upRepLikes };
+      if (indexCom !== -1) {
+        copy[indexCom] = { ...foundCom, repliesLikes: upRepLikes };
+        return copy;
+      }
       return copy;
 
     case "DELETE_REPLY":
@@ -66,10 +69,13 @@ const reducer = (state, action) => {
       );
 
       const shCopy = [...state];
-      shCopy[indexComment] = {
-        ...foundComment,
-        repliesLikes: updatedRepliesLikes,
-      };
+      if (indexComment !== -1) {
+        shCopy[indexComment] = {
+          ...foundComment,
+          repliesLikes: updatedRepliesLikes,
+        };
+        return shCopy;
+      }
       return shCopy;
 
     case "DELETE_COMMENT":
